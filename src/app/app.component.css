@@ -1,0 +1,19 @@
+.header-container {
+  width: 100%;
+  background: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.body-container {
+  margin-top: 48px;
+}
+
+.footer-container {
+  width: 100%;
+  background: black;
+  color: white;
+  position: fixed;
+  bottom: 0;
+}
