@@ -1,16 +1,16 @@
 <nav class="main-nav">
   <ul class="main-nav-items">
-    <li *ngIf="isLoggedIn" class="main-nav-item">
-      {{userName}}
-    </li>
     <li class="main-nav-item">
       <a routerLink="/">Home</a>
     </li>
     <li class="main-nav-item">
       <a routerLink="about">About</a>
     </li>
-    <li class="main-nav-item">
-      <button (click)="open(content)">Login</button>
+    <li *ngIf="!isLoggedIn" class="main-nav-item">
+      <a (click)="open(content)">Login</a>
+    </li>
+    <li *ngIf="isLoggedIn" class="main-nav-item loggedin-user">
+      {{ userName }} Logged In
     </li>
     <li *ngIf="isLoggedIn" class="main-nav-item">
       <a routerLink="gallery">Gallery</a>
@@ -32,23 +32,20 @@
     <form (ngSubmit)="onSubmit(addMountForm)" #addMountForm="ngForm">
       <div class="form-group">
         <div class="form-group">
-          <label class="col-sm-2 control-label text-nowrap" for="uid">User id</label>
+          <label class="col-sm-2 control-label text-nowrap" for="userid">User id</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" ngModel id="uid" name="uid" placeholder="User id" />
+            <input type="text" class="form-control" ngModel id="userid" name="userid" placeholder="User id" />
           </div>
-          <label class="col-sm-2 control-label text-nowrap" for="pswd">Password</label>
+          <label class="col-sm-2 control-label text-nowrap" for="password">Password</label>
           <div class="col-sm-10">
-            <input type="text" class="form-control" ngModel id="pswd" name="pswd" placeholder="Password" />
+            <input type="text" class="form-control" ngModel id="password" name="password" placeholder="Password" />
           </div>
-          <div *ngIf="error">
+          <div *ngIf="invalidUser" class="error-msg">
             User is not valid
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-outline-primary">Sign In</button>
+      <button type="submit" class="btn btn-outline-primary button-wrapper">Sign In</button>
     </form>
   </div>
-  <!-- <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
-  </div> -->
 </ng-template>

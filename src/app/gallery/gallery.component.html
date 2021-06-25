@@ -1,21 +1,23 @@
-<p>My Best T20 XI</p>
-<mat-grid-list cols="4" rowHeight="2:1">
-  <!-- <mat-grid-tile rowspan="2"><img src="../../assets/myImg.JPG" class="image-wrapper"></mat-grid-tile> -->
+<div class="text-wrapper">Our Best T20 XI</div>
+<div class="captain">AB De Villiers(c)</div>
+<div class="captain">KL Rahul(wk)</div>
+<mat-grid-list cols="4" rowHeight="1:1">
   <mat-grid-tile *ngFor="let player of t20Players">
-    <img src='../../assets/t20Players/{{player.player}}.jpg' class="image-wrapper">
+    <img src='../../assets/t20Players/{{player.player}}.jpg' alt="loading" class="image-wrapper">
   </mat-grid-tile>
 </mat-grid-list>
-<p>My Best ODI XI</p>
-<mat-grid-list cols="4" rowHeight="2:1">
-  <!-- <mat-grid-tile rowspan="2"><img src="../../assets/myImg.JPG" class="image-wrapper"></mat-grid-tile> -->
+<div class="text-wrapper">Our Best ODI XI</div>
+<div class="captain">MS Dhoni(c & wk)</div>
+<mat-grid-list cols="4" rowHeight="1:1">
   <mat-grid-tile *ngFor="let player of odiPlayers">
-    <img src='../../assets/odiPlayers/{{player.player}}.jpg' class="image-wrapper">
+    <img src='../../assets/odiPlayers/{{player.player}}.jpg' alt="loading" class="image-wrapper">
   </mat-grid-tile>
 </mat-grid-list>
-<p>My Best Test XI</p>
-<mat-grid-list cols="4" rowHeight="2:1">
-  <!-- <mat-grid-tile rowspan="2"><img src="../../assets/myImg.JPG" class="image-wrapper"></mat-grid-tile> -->
+<div class="text-wrapper">Our Best Test XI</div>
+<div class="captain">Steve Smith(c)</div>
+<div class="captain">Kumar Sangakkara(wk)</div>
+<mat-grid-list cols="4" rowHeight="1:1">
   <mat-grid-tile *ngFor="let player of testPlayers">
-    <img src='../../assets/testPlayers/{{player.player}}.jpg' class="image-wrapper">
+    <img src='../../assets/testPlayers/{{player.player}}.jpg' alt="loading" class="image-wrapper">
   </mat-grid-tile>
 </mat-grid-list>

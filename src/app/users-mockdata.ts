@@ -1,17 +1,27 @@
 export const usersDB = [
   {
-    userid : 'abc@media.com',
-    password: 'abc123',
-    username:'tom'
+    userid : 'harsha@criclovers.com',
+    password: 'harsha123',
+    username: 'Harsha'
   },
   {
-    userid : 'def@media.com',
-    password: 'def123',
-    username:'dick'
+    userid : 'ganguly@criclovers.com',
+    password: 'ganguly123',
+    username: 'Ganguly'
   },
   {
-    userid : 'ghi@media.com',
-    password: 'ghi123',
-    username:'harry'
+    userid : 'sachin@criclovers.com',
+    password: 'sachin123',
+    username: 'Sachin'
   },
+  {
+    userid : 'virat@criclovers.com',
+    password: 'virat123',
+    username: 'Virat'
+  },
+  {
+    userid : 'kaif@criclovers.com',
+    password: 'kaif123',
+    username: 'Kaif'
+  }
 ];

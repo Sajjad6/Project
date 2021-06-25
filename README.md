@@ -1,6 +1,12 @@
 # Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+This project was generated with 
+[Angular CLI](https://github.com/angular/angular-cli) version 11.0.4.
+
+I have used the below packages in this project
+Angular Material 11.2.13
+Bootstrap 5.0.1
+ng-bootstrap 9.1.3
 
 ## Development server
 

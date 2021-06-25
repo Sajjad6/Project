@@ -1,3 +1,17 @@
+.text-wrapper {
+  background: black;
+  text-align: center;
+  color: #a45ca9;
+  font-size: 64px;
+}
+
+.captain {
+  text-align: center;
+  font-size: 32px;
+  background: black;
+  color: white;
+}
+
 mat-grid-tile {
   background: lightblue;
 }

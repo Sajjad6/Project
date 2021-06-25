@@ -1,0 +1,10 @@
+
+.container {
+  background: rgb(218, 212, 212);
+}
+
+p {
+  text-align: justify;
+  font-size: 20px;
+  text-indent: 64px;
+}

@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
     FormsModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatGridListModule
+    MatGridListModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

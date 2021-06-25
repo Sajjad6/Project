@@ -12,8 +12,8 @@ export class HeaderComponent implements OnInit {
 
   closeResult: string;
   isLoggedIn = false;
-  userName = 'Dick';
-  error = false;
+  invalidUser = false;
+  userName = '';
 
   constructor(private modalService: NgbModal, private router: Router) { }
 
@@ -40,10 +40,9 @@ export class HeaderComponent implements OnInit {
   }
 
   onSubmit(form) {
-    console.log('FromLocalStorage:', localStorage.getItem('users'));
     const usersList = JSON.parse(localStorage.getItem('users'));
     usersList.forEach(user => {
-      if (form.value.uid === user.userid && form.value.pswd === user.password) {
+      if (form.value.userid === user.userid && form.value.password === user.password) {
         this.modalService.dismissAll();
         this.userName = user.username;
         this.isLoggedIn = true;
@@ -51,12 +50,13 @@ export class HeaderComponent implements OnInit {
       }
     })
     if (!this.isLoggedIn) {
-      this.error = true;
+      this.invalidUser = true;
     }
   }
 
   onLogoutClicked() {
     this.isLoggedIn = false;
+    this.invalidUser = false;
     this.router.navigate(['/']);
   }
 

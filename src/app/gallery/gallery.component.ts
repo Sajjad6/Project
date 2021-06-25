@@ -18,43 +18,43 @@ export class GalleryComponent implements OnInit {
 
   setupPlayers() {
     this.t20Players = [
-      { player: 'abd'},
-      { player: 'rashid'},
-      { player: 'russell'},
       { player: 'gayle'},
       { player: 'rahul'},
-      { player: 'bumrah'},
-      { player: 'tahir'},
+      { player: 'abd'},
       { player: 'maxwell'},
-      { player: 'malinga'},
       { player: 'pant'},
+      { player: 'russell'},
+      { player: 'rashid'},
+      { player: 'tahir'},
+      { player: 'malinga'},
       { player: 'rabada'},
+      { player: 'bumrah'},
     ]
     this.odiPlayers = [
-      { player: 'bond'},
-      { player: 'dhoni'},
-      { player: 'jadeja'},
+      { player: 'sachin'},
       { player: 'kallis'},
       { player: 'kohli'},
-      { player: 'narine'},
       { player: 'pointing'},
-      { player: 'sachin'},
-      { player: 'starc'},
-      { player: 'stokes'},
       { player: 'williamson'},
+      { player: 'stokes'},
+      { player: 'dhoni'},
+      { player: 'jadeja'},
+      { player: 'narine'},
+      { player: 'starc'},
+      { player: 'bond'}
     ]
     this.testPlayers = [
+      { player: 'warner'},
+      { player: 'cook'},
+      { player: 'pujara'},
+      { player: 'kohli'},
+      { player: 'steven_smith'},
+      { player: 'sangakkara'},
+      { player: 'warne'},
+      { player: 'muralitharan'},
       { player: 'amir'},
       { player: 'anderson'},
-      { player: 'ashwin'},
-      { player: 'cook'},
-      { player: 'kohli'},
-      { player: 'mccullum'},
-      { player: 'pujara'},
-      { player: 'sangakkara'},
-      { player: 'steven_smith'},
-      { player: 'warne'},
-      { player: 'zaheer'},
+      { player: 'zaheer'}
     ]
   }
 
