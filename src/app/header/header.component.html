@@ -1,10 +1,7 @@
-<!-- <p>header works!</p> -->
 <nav class="main-nav">
-  <!-- <div>{{userName}}</div> -->
   <ul class="main-nav-items">
     <li *ngIf="isLoggedIn" class="main-nav-item">
       {{userName}}
-      <!-- <a routerLink="/">Home</a> -->
     </li>
     <li class="main-nav-item">
       <a routerLink="/">Home</a>
@@ -34,29 +31,19 @@
   <div class="modal-body">
     <form (ngSubmit)="onSubmit(addMountForm)" #addMountForm="ngForm">
       <div class="form-group">
-        <!-- <label for="userid">User Id</label>
-        <input id="userid" type="text">
-        <label for="password">Password</label>
-        <input id="password" type="password"> -->
         <div class="form-group">
-          <label class="col-sm-2 control-label text-nowrap"
-             for="uid">User id</label>
+          <label class="col-sm-2 control-label text-nowrap" for="uid">User id</label>
           <div class="col-sm-10">
-             <input type="text" class="form-control" ngModel id="uid" name="uid" placeholder="User id"/>
+            <input type="text" class="form-control" ngModel id="uid" name="uid" placeholder="User id" />
           </div>
-          <label class="col-sm-2 control-label text-nowrap"
-             for="pswd">Password</label>
+          <label class="col-sm-2 control-label text-nowrap" for="pswd">Password</label>
           <div class="col-sm-10">
-             <input type="text" class="form-control" ngModel id="pswd" name="pswd" placeholder="Password"/>
+            <input type="text" class="form-control" ngModel id="pswd" name="pswd" placeholder="Password" />
           </div>
-       </div>
-        <!-- <label for="dateOfBirth">Date of birth</label>
-        <div class="input-group">
-          <input id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" name="dp" ngbDatepicker #dp="ngbDatepicker">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+          <div *ngIf="error">
+            User is not valid
           </div>
-        </div> -->
+        </div>
       </div>
       <button type="submit" class="btn btn-outline-primary">Sign In</button>
     </form>
@@ -65,9 +52,3 @@
     <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Close</button>
   </div> -->
 </ng-template>
-
-<!-- <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
-
-<hr>
-
-<pre>{{ closeResult }}</pre> -->

@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   closeResult: string;
   isLoggedIn = false;
   userName = 'Dick';
+  error = false;
 
   constructor(private modalService: NgbModal, private router: Router) { }
 
@@ -21,7 +22,7 @@ export class HeaderComponent implements OnInit {
   }
 
   open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;
     }, (reason) => {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
@@ -38,9 +39,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  onSubmit(form){
-    console.log("adding form values ");
-    console.log(form);
+  onSubmit(form) {
     console.log('FromLocalStorage:', localStorage.getItem('users'));
     const usersList = JSON.parse(localStorage.getItem('users'));
     usersList.forEach(user => {
@@ -51,9 +50,9 @@ export class HeaderComponent implements OnInit {
         this.router.navigate(['gallery']);
       }
     })
-    // if (form.value.uname === 'tom') {
-    //   this.router.navigate(['gallery']);
-    // }
+    if (!this.isLoggedIn) {
+      this.error = true;
+    }
   }
 
   onLogoutClicked() {

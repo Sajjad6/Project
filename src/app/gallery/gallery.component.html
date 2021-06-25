@@ -4,10 +4,18 @@
   <mat-grid-tile *ngFor="let player of t20Players">
     <img src='../../assets/t20Players/{{player.player}}.jpg' class="image-wrapper">
   </mat-grid-tile>
-  <!-- <mat-grid-tile>3</mat-grid-tile>
-  <mat-grid-tile>4</mat-grid-tile>
-  <mat-grid-tile>5</mat-grid-tile>
-  <mat-grid-tile>6</mat-grid-tile>
-  <mat-grid-tile>7</mat-grid-tile>
-  <mat-grid-tile>8</mat-grid-tile> -->
+</mat-grid-list>
+<p>My Best ODI XI</p>
+<mat-grid-list cols="4" rowHeight="2:1">
+  <!-- <mat-grid-tile rowspan="2"><img src="../../assets/myImg.JPG" class="image-wrapper"></mat-grid-tile> -->
+  <mat-grid-tile *ngFor="let player of odiPlayers">
+    <img src='../../assets/odiPlayers/{{player.player}}.jpg' class="image-wrapper">
+  </mat-grid-tile>
+</mat-grid-list>
+<p>My Best Test XI</p>
+<mat-grid-list cols="4" rowHeight="2:1">
+  <!-- <mat-grid-tile rowspan="2"><img src="../../assets/myImg.JPG" class="image-wrapper"></mat-grid-tile> -->
+  <mat-grid-tile *ngFor="let player of testPlayers">
+    <img src='../../assets/testPlayers/{{player.player}}.jpg' class="image-wrapper">
+  </mat-grid-tile>
 </mat-grid-list>
