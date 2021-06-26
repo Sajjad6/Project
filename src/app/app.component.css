@@ -1,6 +1,6 @@
 .header-container {
   width: 100%;
-  background: purple;
+  background: #050546;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,7 +13,7 @@
 
 .title {
   text-align: center;
-  color: purple;
+  color: #050546;
 }
 
 .footer-container {
